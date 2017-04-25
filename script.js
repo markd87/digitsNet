@@ -32,9 +32,14 @@ $('#canvas').mousemove(function(e){
 $('#canvas').mouseup(function(e){
   paint = false;
   var img=context.getImageData(0,0,84,84);
-  canvas_test.putImageData(img,0,0);
+  var newCanvas = $("<canvas>")
+    .attr("width", imageData.width)
+    .attr("height", imageData.height)[0];
+
+  newCanvas.getContext("2d").putImageData(img, 0, 0);
+
   context_test.scale(1/3,1/3);
-  context_test.drawImage(canvas_test, 0, 0);
+  context_test.drawImage(newCanvas, 0, 0);
 
 });
 
