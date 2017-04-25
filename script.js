@@ -1,13 +1,7 @@
-
-
 $(document).ready(function(){
 
-var canvasDiv = document.getElementById('canvasDiv');
-canvas = document.createElement('canvas');
-canvas.setAttribute('width', 28);
-canvas.setAttribute('height', 28);
-canvas.setAttribute('id', 'canvas');
-canvasDiv.appendChild(canvas);
+var canvas=document.getElementById('canvas');
+
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
