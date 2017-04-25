@@ -8,7 +8,7 @@ if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
 var context = canvas.getContext("2d");
-var context_test = canvas_test.getContext("2d");
+var destCtx = canvas_test.getContext("2d");
 
 
 $('#canvas').mousedown(function(e){
@@ -33,8 +33,14 @@ $('#canvas').mouseup(function(e){
   paint = false;
   var img=context.getImageData(0,0,84,84);
 
-  context.drawImage(img, 0, 0, 1/3*canvas.width, 1/3*canvas.height );
+	var newCanvas = $("<canvas>")
+	    .attr("width", imageData.width)
+	    .attr("height", imageData.height)[0];
 
+	newCanvas.getContext("2d").putImageData(imageData, 0, 0);
+
+	destCtx.scale(1/3, 1/3);
+	destCtx.drawImage(newCanvas, 0, 0);
 
 });
 
