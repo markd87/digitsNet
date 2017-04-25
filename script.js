@@ -33,10 +33,10 @@ $('#canvas').mouseup(function(e){
   paint = false;
   var img=context.getImageData(0,0,84,84);
 
-	destCtx.putImageData(img, 0, 0);
+destCtx.putImageData(img, 0, 0);
+destCtx.scale(1/3,1/3)
 
-	destCtx.drawImage(img, 0, 0);
-//	destCtx.scale(1/3, 1/3);
+       context.drawImage(img,0,0);
 
 });
 
