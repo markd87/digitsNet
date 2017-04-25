@@ -6,6 +6,8 @@ if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
 context = canvas.getContext("2d");
+context_test = $("#canvas_test")[0].getContext("2d");
+
 
 $('#canvas').mousedown(function(e){
   var mouseX = e.pageX - this.offsetLeft;
@@ -13,7 +15,7 @@ $('#canvas').mousedown(function(e){
 		
   paint = true;
   addClick(e.pageX - this.offsetLeft, e.pageY - this.offsetTop);
-  redraw();
+  redraw();	
 });
 
 
@@ -27,8 +29,11 @@ $('#canvas').mousemove(function(e){
 
 $('#canvas').mouseup(function(e){
   paint = false;
-  console.log(clickX);
-  console.log(clickY);
+  var img=context.getImageData(0,0,84,84);
+  canvas_test.putImageData(img,0,0);
+  context_test.scale(1/3,1/3);
+  destCtx.drawImage(canvas_test, 0, 0);
+
 });
 
 $('#canvas').mouseleave(function(e){
