@@ -9,7 +9,7 @@ if(typeof G_vmlCanvasManager != 'undefined') {
 }
 var context = canvas.getContext("2d");
 var destCtx = canvas_test.getContext("2d");
-destCtx.scale(1/3,1/3);
+//destCtx.scale(1/3,1/3);
 
 $('#canvas').mousedown(function(e){
   var mouseX = e.pageX - this.offsetLeft;
@@ -31,14 +31,9 @@ $('#canvas').mousemove(function(e){
 
 $('#canvas').mouseup(function(e){
   paint = false;
-  destCtx.save();
 
-// Use the identity matrix while clearing the canvas
-destCtx.setTransform(1, 0, 0, 1, 0, 0);
 destCtx.clearRect(0, 0, canvas_test.width, canvas.height);
 
-// Restore the transform
-destCtx.restore();
   var img=context.getImageData(0,0,84,84);
   destCtx.drawImage(canvas, 0, 0);
   
