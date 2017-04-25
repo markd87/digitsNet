@@ -27,6 +27,8 @@ $('#canvas').mousemove(function(e){
 
 $('#canvas').mouseup(function(e){
   paint = false;
+  console.log(clickX);
+  console.log(clickY);
 });
 
 $('#canvas').mouseleave(function(e){
