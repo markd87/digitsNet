@@ -1,3 +1,7 @@
+
+
+$(document).ready(function(){
+
 var canvasDiv = document.getElementById('canvasDiv');
 canvas = document.createElement('canvas');
 canvas.setAttribute('width', 28);
@@ -8,8 +12,6 @@ if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
 context = canvas.getContext("2d");
-
-$(document).ready(function(){
 
 $('#canvas').mousedown(function(e){
   var mouseX = e.pageX - this.offsetLeft;
