@@ -37,7 +37,7 @@ destCtx.clearRect(0, 0, canvas_test.width, canvas.height);
   var img=context.getImageData(0,0,84,84);
   destCtx.drawImage(canvas, 0, 0);
   
-  console.log(destCtx.getImageData(0,0,28,28));
+  console.log(destCtx.getImageData(0,0,28,28).data);
 
 });
 
