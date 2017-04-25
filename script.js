@@ -2,11 +2,13 @@ $(document).ready(function(){
 
 var canvas=document.getElementById('canvas');
 
+var canvas_test=document.getElementById('canvas_test');
+
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
-context = canvas.getContext("2d");
-context_test = $("#canvas_test")[0].getContext("2d");
+var context = canvas.getContext("2d");
+var context_test = canvas_test.getContext("2d");
 
 
 $('#canvas').mousedown(function(e){
