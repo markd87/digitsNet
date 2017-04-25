@@ -34,10 +34,10 @@ $('#canvas').mouseup(function(e){
   var img=context.getImageData(0,0,84,84);
 
 	var newCanvas = $("<canvas>")
-	    .attr("width", imageData.width)
-	    .attr("height", imageData.height)[0];
+	    .attr("width", img.width)
+	    .attr("height", img.height)[0];
 
-	newCanvas.getContext("2d").putImageData(imageData, 0, 0);
+	newCanvas.getContext("2d").putImageData(img, 0, 0);
 
 	destCtx.scale(1/3, 1/3);
 	destCtx.drawImage(newCanvas, 0, 0);
