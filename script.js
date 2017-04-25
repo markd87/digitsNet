@@ -33,7 +33,7 @@ $('#canvas').mouseup(function(e){
   paint = false;
   var img=context.getImageData(0,0,84,84);
 
-  context.drawImage( canvas, 0, 0, 1/3*canvas.width, 1/3*canvas.height );
+  context.drawImage(img, 0, 0, 1/3*canvas.width, 1/3*canvas.height );
 
 
 });
