@@ -32,7 +32,7 @@ $('#canvas').mousemove(function(e){
 $('#canvas').mouseup(function(e){
   paint = false;
   var img=context.getImageData(0,0,84,84);
-
+	destCtx.clearRect(0, 0, canvas.width, canvas.height);
   destCtx.drawImage(canvas, 0, 0);
   
 
@@ -59,7 +59,7 @@ function redraw(){
   
   context.strokeStyle = "#000000";
   context.lineJoin = "round";
-  context.lineWidth = 3;
+  context.lineWidth = 4;
 			
   for(var i=0; i < clickX.length; i++) {		
     context.beginPath();
