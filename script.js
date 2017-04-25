@@ -1,10 +1,11 @@
+
+$(document).ready(function(){
+
 canvas = document.getElementById('canvas');
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
 context = canvas.getContext("2d");
-
-$(document).ready(function(){
 
 $('#canvas').mousedown(function(e){
   var mouseX = e.pageX - this.offsetLeft;
