@@ -38,7 +38,7 @@ destCtx.setTransform(1, 0, 0, 1, 0, 0);
 destCtx.clearRect(0, 0, canvas_test.width, canvas.height);
 
 // Restore the transform
-context.restore();
+destCtx.restore();
   var img=context.getImageData(0,0,84,84);
   destCtx.drawImage(canvas, 0, 0);
   
