@@ -67,7 +67,7 @@ function predict(input,wih,who){
 	//console.log(sf);
 	for (var i=0; i<10; i++){
 		var s=i.toString();
-		$('#v'+s).html(arrdigits[i].toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+		$('#v'+s).html(arrdigits[i].toString().match(/^-?\d+(?:\.\d{0,3})?/)[0]);
 	}
 
 
