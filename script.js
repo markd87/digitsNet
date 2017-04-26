@@ -29,13 +29,13 @@ tt=tt.map(function(val){return val/255*0.99+0.01});
 //console.log(tt);
 
 function predict(input,wih,who){
-	alert('predicting tt');
+	alert('predicting tt2');
 	var inarr=math.matrix(input);
 	console.log(inarr);
 	var inmat=math.transpose(inarr);
 	//console.log(wih);
 	var w1=math.matrix(wih);
-	console.log(w1);
+	//console.log(w1);
 	w1=math.reshape(w1,[200,784]);
 	var w2=math.matrix(who);
 	w2=math.reshape(w2,[10,200]);
