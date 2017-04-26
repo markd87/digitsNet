@@ -76,11 +76,6 @@ var canvas=document.getElementById('canvas');
 var canvas_test=document.getElementById('canvas_test');
 
 
-
-
-
-predict(tt,wih,who);
-
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
@@ -161,6 +156,7 @@ function redraw(){
   }
 }
 
+predict(tt,wih,who);
 
 
 });
