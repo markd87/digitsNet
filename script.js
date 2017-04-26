@@ -68,6 +68,7 @@ $.get({
 }).done(function(data){
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
+	console.log(who);
 	predict(tt,wih,who);
 });
 
