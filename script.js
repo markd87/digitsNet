@@ -47,6 +47,9 @@ function predict(input,wih,who){
 	console.log(fin_out);
 }
 
+var wih=new Array();
+var who=new Array();
+
 $(document).ready(function(){
 
 $.ajax({
@@ -73,8 +76,7 @@ var canvas=document.getElementById('canvas');
 
 var canvas_test=document.getElementById('canvas_test');
 
-var wih=new Array();
-var who=new Array();
+
 
 
 
