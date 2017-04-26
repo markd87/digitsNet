@@ -29,8 +29,8 @@ tt=tt.map(function(val){return val/255*0.99+0.01});
 //console.log(tt);
 
 function predict(input,wih,who){
-	alert('predicting tt2');
-	console.log(input.toString());
+	//alert('predicting tt2');
+	//console.log(input.toString());
 	var inarr=math.matrix(input);
 	console.log(inarr);
 	var inmat=math.transpose(inarr);
@@ -46,7 +46,9 @@ function predict(input,wih,who){
 	var fin=math.multiply(w2,hid_out);
 	var fin_out=math.map(fin, function(value){return sigmoid(value)});
 
+	var mx=Math.max(...fin_out);
 	console.log(fin_out);
+	alert(fin_out.indexOf(mx));
 }
 
 var wih=new Array();
