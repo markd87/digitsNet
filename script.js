@@ -132,7 +132,7 @@ destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
   img=context.getImageData(0,0,140,140);
 
-$("#predict").attr('disabled',false);
+$("#predict").removeAttr('disabled');
  
 
 });
@@ -154,6 +154,7 @@ clickDrag = [];
 img=0;
 destCtx.clearRect(0, 0, canvas.width, canvas.height);
 context.clearRect(0, 0, canvas.width, canvas.height);
+$("#predict").attr('disabled','disabled');
 });
 
 $('#predict').mousedown(function(e){
