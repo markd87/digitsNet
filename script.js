@@ -156,7 +156,7 @@ var paint;
 $('#clear').mousedown(function(e){
 clickX=[];
 clickY=[];
-destCtx.clearRect(0, 0, canvas_test.width, canvas_test.height);
+destCtx.clearRect(0, 0, canvas.width, canvas.height);
 context.clearRect(0, 0, canvas.width, canvas.height);
 });
 
