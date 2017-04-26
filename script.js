@@ -158,6 +158,7 @@ $('#clear').mousedown(function(e){
 clickX=[];
 clickY=[];
 clickDrag = [];
+img=0;
 destCtx.clearRect(0, 0, canvas.width, canvas.height);
 context.clearRect(0, 0, canvas.width, canvas.height);
 });
