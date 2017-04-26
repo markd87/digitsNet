@@ -55,6 +55,7 @@ $(document).ready(function(){
 $.get({
   url: 'wih.csv',
   dataType: 'text',
+  async: false,
 }).done(function(data){
 	//weights=Array.from(data)
 	wih=data.split(/,/).map(parseFloat);
@@ -65,6 +66,7 @@ $.get({
 $.get({
   url: 'who.csv',
   dataType: 'text',
+  async: false,
 }).done(function(data){
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
