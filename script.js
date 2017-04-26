@@ -72,11 +72,13 @@ function predict(input,wih,who){
 	}
 
 
+	$('li').removeClass('list-group-item-success');
+
 	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
 
 
 	//console.log('digit: ', digit);
-	//console.log(fin_out);
+	console.log(fin_out);
 }
 
 var wih=new Array();
