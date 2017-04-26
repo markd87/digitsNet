@@ -10,7 +10,7 @@ function makeInput(data){
 };
 
 function sigmoid(v){
-	return 1/(1+Math.exp(-v));
+	return 1.0/(1+Math.exp(-v));
 }
 
 function softmax(arr){
@@ -32,11 +32,15 @@ function predict(input,wih,who){
 	alert('predicting');
 	var inarr=math.matrix(input);
 	var inmat=math.transpose(inarr);
+	console.log(inmat)
 	var w1=math.matrix(wih).resize([200,784]);
+	console.log(w1)
 	var w2=math.matrix(who).resize([10,200]);
 
 	var hid_in=math.multiply(w1,inmat);
+	console.log(hid_in)
 	var hid_out=math.map(hid_in, function(value){return sigmoid(value)});
+	console.log(hid_out)
 	var fin=math.multiply(w2,hid_out);
 	var fin_out=math.map(fin, function(value){return sigmoid(value)});
 
