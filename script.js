@@ -32,9 +32,9 @@ function predict(input,wih,who){
 	alert('predicting');
 	var inarr=math.matrix(input);
 	var inmat=math.transpose(inarr);
-	console.log(wih);
+	//console.log(wih);
 	var w1=math.matrix(wih);
-	console.log(w1);
+	//console.log(w1);
 	w1=math.reshape(w1,[200,784]);
 	var w2=math.matrix(who);
 	w2=math.reshape(w2,[10,200]);
@@ -59,8 +59,8 @@ $.ajax({
 }).done(function(data){
 	//weights=Array.from(data)
 	wih=data.split(/,/).map(parseFloat);
-	console.log('get');
-	console.log(wih);
+	//console.log('get');
+	//console.log(wih);
 });
 
 $.ajax({
@@ -70,10 +70,10 @@ $.ajax({
 }).done(function(data){
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
-	console.log(who);
-	predict(tt,wih,who);
+	//console.log(who);
 });
 
+//predict(tt,wih,who);
 
 var canvas=document.getElementById('canvas');
 
