@@ -68,6 +68,7 @@ $.get({
 }).done(function(data){
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
+	predict(tt,wih,who);
 });
 
 
@@ -155,8 +156,6 @@ function redraw(){
      context.stroke();
   }
 }
-
-predict(tt,wih,who);
 
 
 });
