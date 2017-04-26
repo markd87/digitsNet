@@ -29,7 +29,7 @@ destCtx.scale(1/3,1/3);
 function makeInput(data){
 	var newarr=new Array(28*28);
 	var j=0;
-	for (var i=3; tot=data.length; i<tot; i+=4){
+	for (var i=3, tot=data.length; i<tot; i+=4){
 		newarr[j]=data[i]/255+0.01;
 		j+=1;
 	}
