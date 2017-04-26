@@ -7,3 +7,9 @@ canvas {
 	display: none;
 }
 
+
+li .list_group_item{
+	text-align: left;
+	width: 150px;
+	padding: 2px;
+}
