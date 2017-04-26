@@ -58,7 +58,7 @@ $.get({
 }).done(function(data){
 	//weights=Array.from(data)
 	wih=data.split(/,/).map(parseFloat);
-	console.log('jquery');
+	console.log('get');
 	console.log(wih);
 });
 
