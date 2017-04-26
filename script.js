@@ -32,8 +32,10 @@ function predict(input,wih,who){
 	alert('predicting');
 	var inarr=math.matrix(input);
 	var inmat=math.transpose(inarr);
-	var w1=math.matrix(wih).resize([200,784]);
-	var w2=math.matrix(who).resize([10,200]);
+	var w1=math.matrix(wih)
+	w1=w1.reshape([200,784]);
+	var w2=math.matrix(who);
+	w2=w2.reshape([10,200]);
 
 	var hid_in=math.multiply(w1,inmat);
 	console.log(hid_in)
@@ -60,7 +62,6 @@ $.ajax({
 }).done(function(data){
 	//weights=Array.from(data)
 	wih=data.split(/,/).map(parseFloat);
-	console.log(wih);
 });
 
 $.ajax({
