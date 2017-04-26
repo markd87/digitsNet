@@ -29,7 +29,7 @@ tt=tt.map(function(val){return val/255*0.99+0.01});
 //console.log(tt);
 
 function predict(input,wih,who){
-	alert('predicting');
+	alert('predicting tt');
 	var inarr=math.matrix(input);
 	var inmat=math.transpose(inarr);
 	//console.log(wih);
