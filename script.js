@@ -146,6 +146,11 @@ $('#canvas').mouseleave(function(e){
   paint = false;
 });
 
+$('#clear').mousedown(function(e){
+  destCtx.clearRect(0, 0, canvas_test.width, canvas_test.height);
+  context.clearRect(0, 0, canvas.width, canvas.height);
+});
+
 var clickX = new Array();
 var clickY = new Array();
 var clickDrag = new Array();
