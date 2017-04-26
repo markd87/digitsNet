@@ -26,7 +26,7 @@ var test='0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 tt=test.split(/,/).map(parseFloat);
 
 tt=tt.map(function(val){return val/255*0.99+0.01});
-console.log(tt);
+//console.log(tt);
 
 function predict(input,wih,who){
 	alert('predicting');
