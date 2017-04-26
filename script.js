@@ -10,10 +10,10 @@ $.ajax({
   url: 'temp.csv',
   dataType: 'text',
 }).done(function(data){
-	weights=Array.from(data)
-	weights=float(weights);
+	//weights=Array.from(data)
+	weights=data.split(/,/).map(parseFloat);
 	console.log(weights);
-	console.log(weights[0])
+	console.log(weights[0]);
 });
 
 
