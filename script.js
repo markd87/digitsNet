@@ -15,7 +15,6 @@ function sigmoid(v){
 
 function softmax(arr){
 	tot=arr.length;
-	alert(tot);
 	newarr=new Array(tot);
 	var sum=arr.reduce(function(acc,val){return acc+Math.exp(val)})
 	for (var i=0; i<tot; i++){
@@ -69,7 +68,7 @@ function predict(input,wih,who){
 	ll=sf.length;
 	for (var i=0; i<ll; i++){
 		var s=i.toString();
-		$('#v'+s).html(toString(sf[i]));
+		$('#v'+s).html(sf[i].toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
 	}
 
 
