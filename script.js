@@ -33,9 +33,9 @@ function predict(input,wih,who){
 	var inarr=math.matrix(input);
 	var inmat=math.transpose(inarr);
 	var w1=math.matrix(wih);
-	w1=w1.reshape([200,784]);
+	w1=math.reshape(w1,[200,784]);
 	var w2=math.matrix(who);
-	w2=w2.reshape([10,200]);
+	w2=math.reshape(w2,[10,200]);
 
 	var hid_in=math.multiply(w1,inmat);
 	var hid_out=math.map(hid_in, function(value){return sigmoid(value)});
