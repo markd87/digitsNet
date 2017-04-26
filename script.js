@@ -34,7 +34,7 @@ function predict(input,wih,who){
 	var inmat=math.transpose(inarr);
 	//console.log(wih);
 	var w1=math.matrix(wih);
-	//console.log(w1);
+	console.log(w1);
 	w1=math.reshape(w1,[200,784]);
 	var w2=math.matrix(who);
 	w2=math.reshape(w2,[10,200]);
