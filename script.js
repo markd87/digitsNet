@@ -49,13 +49,6 @@ function predict(input,wih,who){
 
 $(document).ready(function(){
 
-var canvas=document.getElementById('canvas');
-
-var canvas_test=document.getElementById('canvas_test');
-
-var wih=new Array();
-var who=new Array();
-
 $.ajax({
   url: 'wih.csv',
   dataType: 'text',
@@ -66,6 +59,7 @@ $.ajax({
 	console.log(wih);
 });
 
+
 $.ajax({
   url: 'who.csv',
   dataType: 'text',
@@ -73,6 +67,16 @@ $.ajax({
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
 });
+
+
+var canvas=document.getElementById('canvas');
+
+var canvas_test=document.getElementById('canvas_test');
+
+var wih=new Array();
+var who=new Array();
+
+
 
 predict(tt,wih,who);
 
