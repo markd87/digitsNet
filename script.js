@@ -33,6 +33,7 @@ function makeInput(data){
 		newarr[j]=data[i]/255+0.01;
 		j+=1;
 	}
+	return newarr;
 }
 
 
