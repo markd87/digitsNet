@@ -160,7 +160,7 @@ function redraw(){
   }
 }
 
-if (ready==2){
+if (ready>0){
 	predict(tt,wih,who);
 }
 
