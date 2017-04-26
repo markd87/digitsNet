@@ -2,14 +2,39 @@ function makeInput(data){
 	var newarr=new Array(28*28);
 	var j=0;
 	tot=data.length;
-	alert(tot);
 	for (var i=3;  i<tot; i+=4){
 		newarr[j]=data[i]/255+0.01;
 		j+=1;
 	}
-	alert(newarr[0]);
 	return newarr;
 };
+
+function sigmoid(v){
+	return 1/(1+Math.exp(-v));
+}
+
+function softmax(arr){
+	tot=arr.length;
+	newarr=new Array(tot);
+	var sum=arr.reduce(function(acc,val){acc+Math.exp(val)})
+	for (var i=0; i<arr; i++){
+		arr[i]=Math.exp(arr[i])/sum
+	}
+	return newarr;
+}
+
+function predict(input){
+	var inarr=math.matrix(input).transpose();
+	var w1=math.matrix(wih).resize([200,784]);
+	var w2=math.matrix(who).resize([10,200]);
+
+	hid_in=math.dot(w1,inarr);
+	hid_out=math.map(hid_in, sigmoid(value));
+	fin=math.dot(w2,hid_out);
+	fin_out=math.map(fin, sigmoid(value));
+
+	console.log(fin_out);
+}
 
 $(document).ready(function(){
 
@@ -17,18 +42,25 @@ var canvas=document.getElementById('canvas');
 
 var canvas_test=document.getElementById('canvas_test');
 
-var weights=new Array();
+var wih=new Array();
+var who=new Array();
 
 $.ajax({
-  url: 'temp.csv',
+  url: 'wih.csv',
   dataType: 'text',
 }).done(function(data){
 	//weights=Array.from(data)
-	weights=data.split(/,/).map(parseFloat);
-	console.log(weights);
-	console.log(weights[0]);
-	console.log(weights[2]);
+	wih=data.split(/,/).map(parseFloat);
 });
+
+$.ajax({
+  url: 'who.csv',
+  dataType: 'text',
+}).done(function(data){
+	//weights=Array.from(data)
+	who=data.split(/,/).map(parseFloat);
+});
+
 
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
@@ -67,7 +99,9 @@ destCtx.clearRect(0, 0, canvas_test.width, canvas.height);
   digitdata=destCtx.getImageData(0,0,28,28).data;
 
   digitArr=makeInput(digitdata);
-  console.log(digitArr);
+  //console.log(digitArr);
+
+  var dig=predict(digitArr,wih,who)
 
 
 });
