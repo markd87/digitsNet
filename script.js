@@ -43,7 +43,7 @@ function getMaxInd(arr){
 
 function predict(input,wih,who){
 	//alert('predicting tt2');
-	console.log(input.toString());
+	//console.log(input.toString());
 	var inarr=math.matrix(input);
 	//console.log(inarr);
 	var inmat=math.transpose(inarr);
