@@ -59,7 +59,8 @@ function predict(input,wih,who){
 	var fin_out=math.map(fin, function(value){return sigmoid(value)});
 
 	var digit=getMaxInd(fin_out);
-	alert(digit);
+	console.log(digit);
+	console.log(fin_out);
 }
 
 var wih=new Array();
