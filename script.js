@@ -103,7 +103,7 @@ if(typeof G_vmlCanvasManager != 'undefined') {
 }
 var context = canvas.getContext("2d");
 var destCtx = canvas_test.getContext("2d");
-destCtx.scale(1/3,1/3);
+destCtx.scale(0.2,0.2);
 
 
 $('#canvas').mousedown(function(e){
@@ -130,7 +130,7 @@ $('#canvas').mouseup(function(e){
 
 destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
-  img=context.getImageData(0,0,84,84);
+  img=context.getImageData(0,0,140,140);
 
   destCtx.drawImage(canvas, 0, 0);
   
