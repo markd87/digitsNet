@@ -18,7 +18,7 @@ function softmax(arr){
 	newarr=new Array(tot);
 	var sum=arr.reduce(function(acc,val){return acc+Math.exp(val)})
 	for (var i=0; i<arr; i++){
-		arr[i]=Math.exp(arr[i])/sum
+		newarr[i]=Math.exp(arr[i])/sum
 	}
 	return newarr;
 }
