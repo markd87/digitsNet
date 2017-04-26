@@ -32,7 +32,7 @@ function predict(input,wih,who){
 	console.log(inmat);
 
 	var hid_in=math.multiply(w1,inmat);
-	var hid_out=math.map(hid_in, sigmoid(value));
+	var hid_out=math.map(hid_in, function(value){return sigmoid(value)});
 	var fin=math.multiply(w2,hid_out);
 	var fin_out=math.map(fin, sigmoid(value));
 
