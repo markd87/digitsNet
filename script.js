@@ -14,6 +14,7 @@ $.ajax({
 	weights=data.split(/,/).map(parseFloat);
 	console.log(weights);
 	console.log(weights[0]);
+	console.log(weights[2]);
 });
 
 
