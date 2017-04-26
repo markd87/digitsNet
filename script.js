@@ -60,8 +60,7 @@ function predict(input,wih,who){
 	var fin=math.multiply(w2,hid_out);
 	var fin_out=math.map(fin, function(value){return sigmoid(value)});
 
-	alert('here');
-	var digit=getMaxInd(fin_out);
+	var digit=getMaxInd(fin_out.valueOf());
 	console.log(digit);
 	console.log(fin_out);
 }
