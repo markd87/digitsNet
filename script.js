@@ -28,6 +28,18 @@ var tt=test.split(/,/).map(parseFloat);
 tt=tt.map(function(val){return val/255*0.99+0.01});
 //console.log(tt);
 
+function getMaxInd(arr){
+	max=arr[0];
+	len=arr.length;
+	ind=0;
+	for (var i=1; i<len; i++){
+		if arr[i]>max{
+			ind=i;
+		}
+	}
+	return ind;
+}
+
 function predict(input,wih,who){
 	//alert('predicting tt2');
 	//console.log(input.toString());
@@ -46,9 +58,8 @@ function predict(input,wih,who){
 	var fin=math.multiply(w2,hid_out);
 	var fin_out=math.map(fin, function(value){return sigmoid(value)});
 
-	var mx=Math.max(...fin_out);
-	console.log(fin_out);
-	alert(fin_out.indexOf(mx));
+	digit=getMaxInd(fin_out);
+	alert(digit);
 }
 
 var wih=new Array();
