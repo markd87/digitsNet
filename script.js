@@ -18,13 +18,23 @@ $.ajax({
 });
 
 
-
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
 var context = canvas.getContext("2d");
 var destCtx = canvas_test.getContext("2d");
 destCtx.scale(1/3,1/3);
+
+
+function makeInput(data){
+	var newarr=new Array(28*28);
+	var j=0;
+	for (var i=3; tot=data.length; i<tot; i+=4){
+		newarr[j]=data[i]/255+0.01;
+		j+=1;
+	}
+}
+
 
 $('#canvas').mousedown(function(e){
   var mouseX = e.pageX - this.offsetLeft;
@@ -52,7 +62,11 @@ destCtx.clearRect(0, 0, canvas_test.width, canvas.height);
   var img=context.getImageData(0,0,84,84);
   destCtx.drawImage(canvas, 0, 0);
   
-  console.log(destCtx.getImageData(0,0,28,28).data);
+  digitdata=destCtx.getImageData(0,0,28,28).data;
+
+  digitArr=makeInput(digitdata);
+  console.log(digitArr);
+
 
 });
 
