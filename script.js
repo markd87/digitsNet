@@ -55,9 +55,9 @@ var who=new Array();
 $(document).ready(function(){
 
 $.ajax({
-  url: 'wih.csv',
+  url: 'wih2.csv',
   dataType: 'text',
-  async: false,
+  async: true,
 }).done(function(data){
 	//weights=Array.from(data)
 	wih=data.split(/,/).map(parseFloat);
@@ -66,9 +66,9 @@ $.ajax({
 });
 
 $.ajax({
-  url: 'who.csv',
+  url: 'who2.csv',
   dataType: 'text',
-  async: false,
+  async: true,
 }).done(function(data){
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
@@ -148,7 +148,7 @@ function redraw(){
   
   context.strokeStyle = "#000000";
   context.lineJoin = "round";
-  context.lineWidth = 3;
+  context.lineWidth = 4;
 			
   for(var i=0; i < clickX.length; i++) {		
     context.beginPath();
