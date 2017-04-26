@@ -29,9 +29,9 @@ tt=tt.map(function(val){return val/255*0.99+0.01});
 //console.log(tt);
 
 function getMaxInd(arr){
-	max=arr[0];
-	len=arr.length;
-	ind=0;
+	var max=arr[0];
+	var len=arr.length;
+	var ind=0;
 	for (var i=1; i<len; i++){
 		if (arr[i]>max){
 			ind=i;
