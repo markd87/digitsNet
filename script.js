@@ -150,7 +150,7 @@ $('#canvas').mouseleave(function(e){
 $('#clear').mousedown(function(e){
 	img=0;
 destCtx.clearRect(0, 0, canvas_test.width, canvas_test.height);
-context.clearRect(0, 0, canvas_test.width, canvas_test.height);
+context.clearRect(0, 0, canvas.width, canvas.height);
 });
 
 var clickX = new Array();
