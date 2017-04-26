@@ -59,7 +59,18 @@ function predict(input,wih,who){
 	var fin=math.multiply(w2,hid_out);
 	var fin_out=math.map(fin, function(value){return sigmoid(value)});
 
-	var digit=getMaxInd(fin_out.valueOf());
+
+	var arrdigits=fin_out.valueOf()
+	var digit=getMaxInd(arrdigits);
+
+	var sf=softmax(arrdigits);
+	ll=sf.length;
+	for (var i=0; i<ll; i++){
+		$("span#v"+parseString(i)).html(parseString(sf[i]));
+	}
+
+
+
 	console.log('digit: ', digit);
 	console.log(fin_out);
 }
