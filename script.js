@@ -16,7 +16,7 @@ function sigmoid(v){
 function softmax(arr){
 	tot=arr.length;
 	newarr=new Array(tot);
-	var sum=arr.reduce(function(acc,val){acc+Math.exp(val)})
+	var sum=arr.reduce(function(acc,val){return acc+Math.exp(val)})
 	for (var i=0; i<arr; i++){
 		arr[i]=Math.exp(arr[i])/sum
 	}
