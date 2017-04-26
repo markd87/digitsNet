@@ -73,7 +73,7 @@ $.ajax({
 	//console.log(who);
 });
 
-//predict(tt,wih,who);
+predict(tt,wih,who);
 
 var canvas=document.getElementById('canvas');
 
