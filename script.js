@@ -66,7 +66,7 @@ function predict(input,wih,who){
 	var sf=softmax(arrdigits);
 	ll=sf.length;
 	for (var i=0; i<ll; i++){
-		var s='span#v'.toString(i);
+		var s='span#v'.concat(toString(i));
 		alert(s);
 		$(s).html(toString(sf[i]));
 	}
