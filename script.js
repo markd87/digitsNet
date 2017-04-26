@@ -55,6 +55,7 @@ var canvas_test=document.getElementById('canvas_test');
 
 var wih=new Array();
 var who=new Array();
+var ready=0;
 
 $.ajax({
   url: 'wih.csv',
@@ -64,6 +65,7 @@ $.ajax({
 	wih=data.split(/,/).map(parseFloat);
 	console.log('jquery');
 	console.log(wih);
+	ready+=1;
 });
 
 $.ajax({
@@ -72,11 +74,11 @@ $.ajax({
 }).done(function(data){
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
+	ready+=1;
 });
 
 
 alert('new pred');
-predict(tt,wih,who);
 
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
@@ -156,6 +158,10 @@ function redraw(){
      context.closePath();
      context.stroke();
   }
+}
+
+if (ready==2){
+	predict(tt,wih,who);
 }
 
 });
