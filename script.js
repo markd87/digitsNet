@@ -13,6 +13,7 @@ $.ajax({
 	weights=Array.from(data)
 	weights=float(weights);
 	console.log(weights);
+	console.log(weights[0])
 });
 
 
