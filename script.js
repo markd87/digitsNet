@@ -44,7 +44,7 @@ function predict(input,wih,who){
 	var fin=math.multiply(w2,hid_out);
 	var fin_out=math.map(fin, function(value){return sigmoid(value)});
 
-	tot=math.reduce(fin_out,function(acc,val){return acc+Math.exp(val)});
+	tot=fin_out.reduce(function(acc,val){return acc+Math.exp(val)});
 	sf=math.map(fin_out,function(val){Math.exp(val)/tot})
 	console.log(sf);
 }
