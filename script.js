@@ -63,12 +63,12 @@ function predict(input,wih,who){
 	var arrdigits=fin_out.valueOf()
 	var digit=getMaxInd(arrdigits);
 
-	var sf=softmax(arrdigits);
-	console.log(sf);
+	//var sf=softmax(arrdigits);
+	//console.log(sf);
 	ll=sf.length;
 	for (var i=0; i<ll; i++){
 		var s=i.toString();
-		$('#v'+s).html(sf[i].toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
+		$('#v'+s).html(arrdigits[i].toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
 	}
 
 
