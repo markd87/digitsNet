@@ -4,6 +4,17 @@ var canvas=document.getElementById('canvas');
 
 var canvas_test=document.getElementById('canvas_test');
 
+var weights=new Array();
+
+$.ajax({
+  url: 'temp.csv',
+  dataType: 'text',
+}).done(function(data){
+	console.log(data);
+});
+
+
+
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
 }
