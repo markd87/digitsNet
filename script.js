@@ -12,6 +12,7 @@ $.ajax({
 }).done(function(data){
 	weights=Array.from(data)
 	weights=float(weights);
+	console.log(weights);
 });
 
 
