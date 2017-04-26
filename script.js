@@ -23,7 +23,7 @@ function softmax(arr){
 	return newarr;
 }
 
-function predict(input){
+function predict(input,wih,who){
 	alert('predicting');
 	var inarr=math.matrix(input)
 	var inmat=math.transpose(inarr);
