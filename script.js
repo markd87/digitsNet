@@ -24,6 +24,7 @@ function softmax(arr){
 }
 
 function predict(input){
+	alert('predicting');
 	var inarr=math.matrix(input).transpose();
 	var w1=math.matrix(wih).resize([200,784]);
 	var w2=math.matrix(who).resize([10,200]);
