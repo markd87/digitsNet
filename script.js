@@ -31,10 +31,10 @@ function predict(input,wih,who){
 	var w2=math.matrix(who).resize([10,200]);
 	console.log(inmat);
 
-	hid_in=math.multiply(w1,inmat);
-	hid_out=math.map(hid_in, sigmoid(value));
-	fin=math.multiply(w2,hid_out);
-	fin_out=math.map(fin, sigmoid(value));
+	var hid_in=math.multiply(w1,inmat);
+	var hid_out=math.map(hid_in, sigmoid(value));
+	var fin=math.multiply(w2,hid_out);
+	var fin_out=math.map(fin, sigmoid(value));
 
 	console.log(fin_out);
 }
