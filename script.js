@@ -46,6 +46,7 @@ function predict(input,wih,who){
 
 	var farr=new Array(fin_out);
 
+
 	tot=farr.reduce(function(acc,val){return acc+Math.exp(val)});
 	sf=farr.map(function(val){return Math.exp(val)/tot})
 	console.log(sf);
