@@ -124,14 +124,14 @@ end = time.time()
 
 print((end-start)/60)
 
-fl='wih.csv'
-ofile=open(fl,'w')
-writer=csv.writer(ofile,delimiter=',')
-writer.writerow(n.wih.reshape(1,200*784)[0])
-ofile.close()
+# fl='wih.csv'
+# ofile=open(fl,'w')
+# writer=csv.writer(ofile,delimiter=',')
+# writer.writerow(n.wih.reshape(1,200*784)[0])
+# ofile.close()
 
-fl='who.csv'
-ofile=open(fl,'w')
-writer=csv.writer(ofile,delimiter=',')
-writer.writerow(n.who.reshape(1,2000)[0])
-ofile.close()
+# fl='who.csv'
+# ofile=open(fl,'w')
+# writer=csv.writer(ofile,delimiter=',')
+# writer.writerow(n.who.reshape(1,2000)[0])
+# ofile.close()
