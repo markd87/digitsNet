@@ -64,9 +64,10 @@ function predict(input,wih,who){
 	var digit=getMaxInd(arrdigits);
 
 	var sf=softmax(arrdigits);
+	console.log(sf);
 	ll=sf.length;
 	for (var i=0; i<ll; i++){
-		var s=toString(i);
+		var s=i.toString();
 		$('#v'+s).html(toString(sf[i]));
 	}
 
