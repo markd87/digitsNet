@@ -32,7 +32,7 @@ function predict(input,wih,who){
 	//alert('predicting tt2');
 	//console.log(input.toString());
 	var inarr=math.matrix(input);
-	console.log(inarr);
+	//console.log(inarr);
 	var inmat=math.transpose(inarr);
 	//console.log(wih);
 	var w1=math.matrix(wih);
