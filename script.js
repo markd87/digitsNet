@@ -33,7 +33,7 @@ function getMaxInd(arr){
 	len=arr.length;
 	ind=0;
 	for (var i=1; i<len; i++){
-		if arr[i]>max{
+		if (arr[i]>max){
 			ind=i;
 		}
 	}
