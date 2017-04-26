@@ -3,7 +3,7 @@ function makeInput(data){
 	var j=0;
 	tot=data.length;
 	alert(tot);
-	for (var i=3,  i<tot, i+=4){
+	for (var i=3;  i<tot; i+=4){
 		newarr[j]=data[i]/255+0.01;
 		j+=1;
 	}
