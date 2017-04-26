@@ -65,8 +65,7 @@ function predict(input,wih,who){
 
 	//var sf=softmax(arrdigits);
 	//console.log(sf);
-	ll=sf.length;
-	for (var i=0; i<ll; i++){
+	for (var i=0; i<10; i++){
 		var s=i.toString();
 		$('#v'+s).html(arrdigits[i].toString().match(/^-?\d+(?:\.\d{0,2})?/)[0]);
 	}
