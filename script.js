@@ -72,9 +72,11 @@ function predict(input,wih,who){
 	}
 
 
+	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
 
-	console.log('digit: ', digit);
-	console.log(fin_out);
+
+	//console.log('digit: ', digit);
+	//console.log(fin_out);
 }
 
 var wih=new Array();
