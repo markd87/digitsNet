@@ -122,6 +122,25 @@ for e in range(epochs):
 
 end = time.time()
 
+test=open("mnist1.csv", 'r')
+test_data = test.readlines()
+test.close()
+
+for record in test_data:
+	all_values = record.split(',')
+	    # correct answer is first value
+	correct_label = int(all_values[0])
+	    # scale and shift the inputs
+	inputs = (numpy.asfarray(all_values[1:]) / 255.0 * 0.99) + 0.01
+	    # query the network
+	outputs = n.query(inputs)
+	    # the index of the highest value corresponds to the label
+	label = numpy.argmax(outputs)
+
+	print(outputs)
+	print(label)
+
+
 print((end-start)/60)
 
 # fl='wih.csv'
