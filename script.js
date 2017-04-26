@@ -147,7 +147,7 @@ $('#canvas').mouseleave(function(e){
 });
 
 $('#clear').mousedown(function(e){
-  destCtx.clearRect(0, 0, canvas_test.width, canvas_test.height);
+  destCtx.clearRect(0, 0, canvas.width, canvas.height);
   context.clearRect(0, 0, canvas.width, canvas.height);
 });
 
