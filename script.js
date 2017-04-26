@@ -25,10 +25,11 @@ function softmax(arr){
 
 function predict(input,wih,who){
 	alert('predicting');
-	var inarr=math.matrix(input)
+	var inarr=math.matrix(input);
 	var inmat=math.transpose(inarr);
 	var w1=math.matrix(wih).resize([200,784]);
 	var w2=math.matrix(who).resize([10,200]);
+	console.log(inmat);
 
 	hid_in=math.multiply(w1,inmat);
 	hid_out=math.map(hid_in, sigmoid(value));
