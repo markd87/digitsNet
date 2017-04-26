@@ -127,7 +127,7 @@ $('#canvas').mousemove(function(e){
 $('#canvas').mouseup(function(e){
   paint = false;
 
-destCtx.clearRect(0, 0, canvas_test.width, canvas.height);
+destCtx.clearRect(0, 0, canvas_test.width, canvas_test.height);
 
   var img=context.getImageData(0,0,84,84);
   destCtx.drawImage(canvas, 0, 0);
