@@ -12,6 +12,7 @@
         <div class="container main">
         <div class='row text-center'>
         <h1 class='title'>DigitsNet</h1>
+        <div class='col-sm-8'>
 <canvas id="canvas" width="140" height="140">
             This text is displayed if your browser does not support HTML5 Canvas.
         </canvas>    
@@ -21,11 +22,10 @@
         <br>
             <button type='button' class='btn btn-sm btn-default' id='clear'>Clear</button> 
             <button type='button' class='btn btn-sm btn-success' disabled='disabled' id='predict'>Predict</button> 
+        </div>
 
-        <br><br>
-
-<div class='col-sm-10 text-center'>
-<ul class="list-group">
+        <div class='col-sm-4'>
+        <ul>
 <li class="list-group-item">0: <span id='v0'></span></li>
 <li class="list-group-item">1: <span id='v1'></span></li>
 <li class="list-group-item">2: <span id='v2'></span></li>
@@ -38,6 +38,9 @@
 <li class="list-group-item">9: <span id='v9'></span></li>
 </ul>
 </div>
+
+        <br><br>
+
 
         
         </div>
