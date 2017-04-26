@@ -52,7 +52,7 @@ var who=new Array();
 
 $(document).ready(function(){
 
-$.get({
+$.ajax({
   url: 'wih.csv',
   dataType: 'text',
   async: false,
@@ -63,7 +63,7 @@ $.get({
 	console.log(wih);
 });
 
-$.get({
+$.ajax({
   url: 'who.csv',
   dataType: 'text',
   async: false,
