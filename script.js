@@ -132,9 +132,8 @@ destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
   img=context.getImageData(0,0,140,140);
 
-$("predict").attr('disabled','false');
-  
-
+$("#predict").attr('disabled','false');
+ 
 
 });
 
