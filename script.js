@@ -31,6 +31,7 @@ tt=tt.map(function(val){return val/255*0.99+0.01});
 function predict(input,wih,who){
 	alert('predicting tt');
 	var inarr=math.matrix(input);
+	console.log(inarr);
 	var inmat=math.transpose(inarr);
 	//console.log(wih);
 	var w1=math.matrix(wih);
@@ -71,9 +72,10 @@ $.ajax({
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
 	//console.log(who);
+	predict(tt,wih,who);
+
 });
 
-predict(tt,wih,who);
 
 var canvas=document.getElementById('canvas');
 
