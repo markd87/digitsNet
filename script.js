@@ -10,7 +10,8 @@ $.ajax({
   url: 'temp.csv',
   dataType: 'text',
 }).done(function(data){
-	console.log(data);
+	weights=Array.from(data)
+	weights=float(weights);
 });
 
 
