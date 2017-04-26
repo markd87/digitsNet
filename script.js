@@ -132,14 +132,7 @@ destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
   img=context.getImageData(0,0,140,140);
 
-  destCtx.drawImage(canvas, 0, 0);
   
-  digitdata=destCtx.getImageData(0,0,28,28).data;
-
-  digitArr=makeInput(digitdata);
-  //console.log(digitArr);
-
-  var dig=predict(digitArr,wih,who)
 
 
 });
@@ -161,6 +154,17 @@ clickDrag = [];
 img=0;
 destCtx.clearRect(0, 0, canvas.width, canvas.height);
 context.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+$('#predict').mousedown(function(e){
+	
+  destCtx.drawImage(canvas, 0, 0);
+  
+  digitdata=destCtx.getImageData(0,0,28,28).data;
+
+  digitArr=makeInput(digitdata);
+
+  var dig=predict(digitArr,wih,who);
 });
 
 
