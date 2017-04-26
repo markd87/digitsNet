@@ -160,6 +160,7 @@ function redraw(){
   }
 }
 
+alert(ready);
 if (ready>0){
 	predict(tt,wih,who);
 }
