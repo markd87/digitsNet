@@ -30,6 +30,7 @@ tt=tt.map(function(val){return val/255*0.99+0.01});
 
 function getMaxInd(arr){
 	var max=arr[0];
+	alert(arr[0]);
 	var len=arr.length;
 	var ind=0;
 	for (var i=1; i<len; i++){
@@ -59,6 +60,7 @@ function predict(input,wih,who){
 	var fin=math.multiply(w2,hid_out);
 	var fin_out=math.map(fin, function(value){return sigmoid(value)});
 
+	alert('here');
 	var digit=getMaxInd(fin_out);
 	console.log(digit);
 	console.log(fin_out);
