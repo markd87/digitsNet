@@ -9,7 +9,7 @@ function makeInput(data){
 	}
 	alert(newarr[0]);
 	return newarr;
-}
+};
 
 $(document).ready(function(){
 
@@ -29,7 +29,6 @@ $.ajax({
 	console.log(weights[0]);
 	console.log(weights[2]);
 });
-
 
 if(typeof G_vmlCanvasManager != 'undefined') {
 	canvas = G_vmlCanvasManager.initElement(canvas);
