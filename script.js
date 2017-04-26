@@ -123,13 +123,14 @@ $('#canvas').mousemove(function(e){
   }
 });
 
+ var img;
 
 $('#canvas').mouseup(function(e){
   paint = false;
 
 destCtx.clearRect(0, 0, canvas_test.width, canvas_test.height);
 
-  var img=context.getImageData(0,0,84,84);
+  img=context.getImageData(0,0,84,84);
   destCtx.drawImage(canvas, 0, 0);
   
   digitdata=destCtx.getImageData(0,0,28,28).data;
@@ -147,6 +148,7 @@ $('#canvas').mouseleave(function(e){
 });
 
 $('#clear').mousedown(function(e){
+	img=0;
     context.width = context.width; 
     destCtx.width = destCtx.width; 
 });
