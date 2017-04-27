@@ -153,6 +153,7 @@ $('#canvas').mouseup(function(e){
 destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
   img=context.getImageData(0,0,140,140);
+  console.log(img);
 
 $("#predict").removeAttr('disabled');
  
