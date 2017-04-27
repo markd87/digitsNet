@@ -63,13 +63,12 @@ function predict(input,wih,who){
 	var arrdigits=fin_out.valueOf()
 	var digit=getMaxInd(arrdigits);
 
-	var sf=arrdigits.reduce(function(acc,val){return acc+Math.exp(val)})
+	var sum=arrdigits.reduce(function(acc,val){return acc+val})
 	//console.log(sf);
-	var sum=0;
 	for (var i=0; i<10; i++){
-		var val =Math.exp(arrdigits[i])/sf;
+		//var val =Math.exp(arrdigits[i])/sf;
+		var val =arrdigits[i]/sum;
 		var s=i.toString();
-		sum+=val
 		if (val <0.001){
 			arrdigits[i]=0.00;
 		}
@@ -83,8 +82,8 @@ function predict(input,wih,who){
 
 
 	//console.log('digit: ', digit);
-	console.log(fin_out);
-	console.log(sum)
+	//console.log(fin_out);
+	//console.log(sum)
 }
 
 var wih=new Array();
