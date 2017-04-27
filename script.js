@@ -63,14 +63,15 @@ function predict(input,wih,who){
 	var arrdigits=fin_out.valueOf()
 	var digit=getMaxInd(arrdigits);
 
-	//var sf=softmax(arrdigits);
+	var sf=arrdigits.reduce(function(acc,val){return acc+Math.exp(val)})
 	//console.log(sf);
 	for (var i=0; i<10; i++){
+		var val =Math.exp(arrdigits[i])/sf
 		var s=i.toString();
-		if (arrdigits[i]<0.001){
+		if (val <0.001){
 			arrdigits[i]=0.00;
 		}
-		$('#v'+s).html(arrdigits[i].toString().match(/^-?\d+(?:\.\d{0,3})?/)[0]);
+		$('#v'+s).html(val.toString().match(/^-?\d+(?:\.\d{0,3})?/)[0]);
 	}
 
 
