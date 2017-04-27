@@ -174,7 +174,9 @@ $("#predict").attr('disabled','disabled');
 });
 
 $('#predict').mousedown(function(e){
-	
+
+	destCtx.clearRect(0, 0, canvas.width, canvas.height);
+
   destCtx.drawImage(canvas, 0, 0);
   
   digitdata=destCtx.getImageData(0,0,28,28).data;
