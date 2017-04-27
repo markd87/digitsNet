@@ -153,7 +153,7 @@ $('#canvas').mouseup(function(e){
 destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
   img=context.getImageData(0,0,140,140);
-  console.log(img);
+  //console.log(img);
 
 $("#predict").removeAttr('disabled');
  
@@ -206,7 +206,8 @@ function redraw(){
   
   context.strokeStyle = "#000000";
   context.lineJoin = "round";
-  context.lineWidth = 7;
+  context.lineCap = 'round';
+  context.lineWidth = 3;
 			
   for(var i=0; i < clickX.length; i++) {		
     context.beginPath();
