@@ -162,6 +162,8 @@ $("#predict").removeAttr('disabled');
 
 $('#canvas').mouseleave(function(e){
   paint = false;
+  $("#predict").removeAttr('disabled');
+
 });
 
 var clickX = new Array();
