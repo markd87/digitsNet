@@ -68,7 +68,7 @@ function predict(input,wih,who){
 	for (var i=0; i<10; i++){
 		var s=i.toString();
 		if (arrdigits[i]<0.001){
-			arrdigits[i]=0.00
+			arrdigits[i]=0.00;
 		}
 		$('#v'+s).html(arrdigits[i].toString().match(/^-?\d+(?:\.\d{0,3})?/)[0]);
 	}
