@@ -79,7 +79,7 @@ function predict(input,wih,who){
 	$('li').removeClass('list-group-item-success');
 
 	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
-
+	$("span#predres").html(digit.toString())
 
 	//console.log('digit: ', digit);
 	//console.log(fin_out);
