@@ -43,7 +43,7 @@ function getMaxInd(arr){
 
 
 function show_load(){
-	$("div#img_loading").show();
+	$("div#img_loading").css('display','block');
 }
 
 function hide_load(){
@@ -54,6 +54,7 @@ function hide_load(){
 function predict(input,wih,who){
 		show_load();
 alert('mark');
+alert($("div#img_loading").css('display'));
 	//alert('predicting tt2');
 	//console.log(input.toString());
 	var inarr=math.matrix(input);
