@@ -42,6 +42,13 @@ function getMaxInd(arr){
 }
 
 
+function show_load(){
+	$("div#img_loading").show();
+}
+
+function hide_load(){
+	$("div#img_loading").hide();
+}
 
 
 function predict(input,wih,who){
@@ -67,7 +74,8 @@ function predict(input,wih,who){
 	var digit=getMaxInd(arrdigits);
 
 
-	$("div#img_loading").hide();
+	hide_load();
+
 
 	var sum=arrdigits.reduce(function(acc,val){return acc+val})
 	//console.log(sf);
@@ -195,7 +203,8 @@ $("#predict").attr('disabled','disabled');
 
 
 $('#predict').mousedown(function(e){
-	$("div#img_loading").show();
+
+	show_load();
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
