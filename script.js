@@ -43,7 +43,7 @@ function getMaxInd(arr){
 
 
 function show_load(){
-	$("div#img_loading").css('display','block');
+	$("div#img_loading").show();
 }
 
 function hide_load(){
