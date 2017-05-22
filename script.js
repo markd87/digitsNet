@@ -100,6 +100,8 @@ var who=new Array();
 
 $(document).ready(function(){
 
+	$("div#img_loading").hide();
+
 $.ajax({
   url: 'wih2.csv',
   dataType: 'text',
