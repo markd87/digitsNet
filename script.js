@@ -183,7 +183,7 @@ $("#predict").attr('disabled','disabled');
 });
 
 $('#predict').mousedown(function(e){
-	ֱ$("span#predres").html("<img src='https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif'/>")
+	ֱ$("span#predres").html("<img src='https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif'/>");
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
