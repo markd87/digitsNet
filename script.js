@@ -79,7 +79,9 @@ function predict(input,wih,who){
 	$('li').removeClass('list-group-item-success');
 
 	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
-	$("div#prediction").html(digit.toString());
+
+	$("img#loading").hide();
+	$("span#predres").html(digit.toString());
 
 	//console.log('digit: ', digit);
 	//console.log(fin_out);
@@ -183,8 +185,7 @@ $("#predict").attr('disabled','disabled');
 });
 
 $('#predict').mousedown(function(e){
-
-	$("div#prediction").html("<img src='https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif'/>");
+	$("img#loading").show();
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
