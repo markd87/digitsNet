@@ -199,7 +199,7 @@ $("#predict").attr('disabled','disabled');
 });
 
 
-$('#predict').mousedown(function(e){
+$('#predict').click(function(e){
 
 	show_load();
 
