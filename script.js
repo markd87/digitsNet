@@ -185,7 +185,7 @@ $("#predict").attr('disabled','disabled');
 });
 
 $('#predict').mousedown(function(e){
-	$("img#loading").show();
+	$("img#loading").css('display','block');
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
