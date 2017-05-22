@@ -45,7 +45,6 @@ function getMaxInd(arr){
 
 
 function predict(input,wih,who){
-	$("div#img_loading").show();
 	//alert('predicting tt2');
 	//console.log(input.toString());
 	var inarr=math.matrix(input);
@@ -194,6 +193,7 @@ $("#predict").attr('disabled','disabled');
 
 
 $('#predict').mousedown(function(e){
+	$("div#img_loading").show();
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
