@@ -88,6 +88,10 @@ function predict(input,wih,who){
 	//console.log(sum)
 }
 
+function show_loading(){
+	$("img#loading").show();
+}
+
 var wih=new Array();
 var who=new Array();
 
@@ -184,8 +188,9 @@ context.clearRect(0, 0, canvas.width, canvas.height);
 $("#predict").attr('disabled','disabled');
 });
 
+
 $('#predict').mousedown(function(e){
-	$("img#loading").css('display','block');
+	show_loading();
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
