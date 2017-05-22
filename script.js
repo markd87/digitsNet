@@ -41,7 +41,13 @@ function getMaxInd(arr){
 	return ind;
 }
 
+
+function show_loading(){
+	$("div#img_loading").show();
+}
+
 function predict(input,wih,who){
+	show_loading();
 	//alert('predicting tt2');
 	//console.log(input.toString());
 	var inarr=math.matrix(input);
@@ -88,9 +94,7 @@ function predict(input,wih,who){
 	//console.log(sum)
 }
 
-function show_loading(){
-	$("img#loading").show();
-}
+
 
 var wih=new Array();
 var who=new Array();
@@ -190,7 +194,6 @@ $("#predict").attr('disabled','disabled');
 
 
 $('#predict').mousedown(function(e){
-	show_loading();
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
