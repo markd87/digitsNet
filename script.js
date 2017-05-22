@@ -79,7 +79,8 @@ function predict(input,wih,who){
 	$('li').removeClass('list-group-item-success');
 
 	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
-	$("span#predres").html(digit.toString())
+	$("div#predres").html("<span id='predres'></span>");
+	$("span#predres").html(digit.toString());
 
 	//console.log('digit: ', digit);
 	//console.log(fin_out);
@@ -184,8 +185,7 @@ $("#predict").attr('disabled','disabled');
 
 $('#predict').mousedown(function(e){
 
-	alert('https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif');
-	$("span#predres").html("<img src='https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif'/>");
+	$("div#prediction").html("<img src='https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif'/>");
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
