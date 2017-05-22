@@ -52,8 +52,9 @@ function hide_load(){
 
 
 function predict(input,wih,who){
+	if ($("div#img_loading").css('display')=='none'){
 		show_load();
-alert('mark');
+	}
 alert($("div#img_loading").css('display'));
 	//alert('predicting tt2');
 	//console.log(input.toString());
