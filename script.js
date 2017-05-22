@@ -42,12 +42,10 @@ function getMaxInd(arr){
 }
 
 
-function show_loading(){
-	$("div#img_loading").show();
-}
+
 
 function predict(input,wih,who){
-	show_loading();
+	$("div#img_loading").show();
 	//alert('predicting tt2');
 	//console.log(input.toString());
 	var inarr=math.matrix(input);
@@ -86,7 +84,7 @@ function predict(input,wih,who){
 
 	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
 
-	$("img#loading").hide();
+	$("div#img_loading").hide();
 	$("span#predres").html(digit.toString());
 
 	//console.log('digit: ', digit);
