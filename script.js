@@ -74,9 +74,6 @@ function predict(input,wih,who){
 	var digit=getMaxInd(arrdigits);
 
 
-	hide_load();
-
-
 	var sum=arrdigits.reduce(function(acc,val){return acc+val})
 	//console.log(sf);
 	for (var i=0; i<10; i++){
@@ -95,7 +92,7 @@ function predict(input,wih,who){
 	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
 
 	$("span#predres").html(digit.toString());
-
+	hide_load();
 	//console.log('digit: ', digit);
 	//console.log(fin_out);
 	//console.log(sum)
@@ -113,7 +110,7 @@ $(document).ready(function(){
 $.ajax({
   url: 'wih2.csv',
   dataType: 'text',
-  async: false,
+  async: true,
 }).done(function(data){
 	//weights=Array.from(data)
 	wih=data.split(/,/).map(parseFloat);
@@ -124,7 +121,7 @@ $.ajax({
 $.ajax({
   url: 'who2.csv',
   dataType: 'text',
-  async: false,
+  async: true,
 }).done(function(data){
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
