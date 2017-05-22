@@ -67,6 +67,9 @@ function predict(input,wih,who){
 	var arrdigits=fin_out.valueOf()
 	var digit=getMaxInd(arrdigits);
 
+
+	$("div#img_loading").hide();
+
 	var sum=arrdigits.reduce(function(acc,val){return acc+val})
 	//console.log(sf);
 	for (var i=0; i<10; i++){
@@ -84,7 +87,6 @@ function predict(input,wih,who){
 
 	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
 
-	$("div#img_loading").hide();
 	$("span#predres").html(digit.toString());
 
 	//console.log('digit: ', digit);
