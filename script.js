@@ -113,7 +113,7 @@ $(document).ready(function(){
 $.ajax({
   url: 'wih2.csv',
   dataType: 'text',
-  async: true,
+  async: false,
 }).done(function(data){
 	//weights=Array.from(data)
 	wih=data.split(/,/).map(parseFloat);
@@ -124,7 +124,7 @@ $.ajax({
 $.ajax({
   url: 'who2.csv',
   dataType: 'text',
-  async: true,
+  async: false,
 }).done(function(data){
 	//weights=Array.from(data)
 	who=data.split(/,/).map(parseFloat);
