@@ -52,6 +52,8 @@ function hide_load(){
 
 
 function predict(input,wih,who){
+		show_load();
+alert('mark');
 	//alert('predicting tt2');
 	//console.log(input.toString());
 	var inarr=math.matrix(input);
