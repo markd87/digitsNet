@@ -92,7 +92,7 @@ function predict(input,wih,who){
 	$("#v"+digit.toString()).parent('li').addClass('list-group-item-success');
 
 	$("span#predres").html(digit.toString());
-	hide_load();
+	//hide_load();
 	//console.log('digit: ', digit);
 	//console.log(fin_out);
 	//console.log(sum)
@@ -201,7 +201,7 @@ $("#predict").attr('disabled','disabled');
 
 $('#predict').click(function(e){
 
-	show_load();
+	//show_load();
 
 	destCtx.clearRect(0, 0, canvas.width, canvas.height);
 
